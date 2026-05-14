@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="" href="images/favicon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Blog</title>
+</head>
+<body>
+    <p>hello</p>
+    <script>
+        const queryString = window.location.search;
+
+        const urlParam = new URLSearchParams(queryString);
+
+        const id = urlParam.get('id');
+
+        console.log(queryString)
+        console.log(urlParam)
+        console.log(id)
+        console.log(window.location);
+    </script>
+</body>
