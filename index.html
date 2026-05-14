@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="Icon_Of_Todos_list" href="download.png">
+    <link rel="icon" type="" href="images/favicon.png">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="main.js"></script>
+    
     <title>Blog</title>
 </head>
 <body class="bg-gray-300">
@@ -20,5 +20,9 @@
     <div id="news-container" >
         
     </div>
+    <script type="module">
+        import { renderPosts } from '/javascript/main.js'
+        renderPosts()
+    </script>
 </body>
 </html>
