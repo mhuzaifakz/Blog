@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="" href="images/favicon.png">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>Blog</title>
-</head>
-<body>
-    <p>hello</p>
-    <script>
-        const queryString = window.location.search;
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type href="images/favicon.png">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <title>Blog</title>
+    </head>
+    <body class="bg-gray-300">
+        <div id="post"></div>
+        <div id="auther"></div>
+        <div id="comments">
+            <h1 class="ml-[10px] mr-[10px] mt-[10px] mb-[10px] p-[10px] border bg-white rounded-xl block text-black text-[25px] mt-[20px]">Comments</h1>
+        </div>
+        <script type="module">
+        import { getPostIdFromURL, renderSingleNews, renderComments } from '/javascript/main.js'
 
-        const urlParam = new URLSearchParams(queryString);
-
-        const id = urlParam.get('id');
-
-        console.log(queryString)
-        console.log(urlParam)
-        console.log(id)
-        console.log(window.location);
+        const id = getPostIdFromURL();
+        renderSingleNews(id)
+        renderComments(id)
     </script>
-</body>
+    </body>
